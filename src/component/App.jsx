@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
-class App extends Component{
+import './App.css'
+export default class App extends Component{
     render(){
         return(
-            <div>
-                First Qz React
+            <div className='box'>
+                <div className='box-image'>
+                    <img src={require('../assests/images/America.png')}/>
+                </div>
             </div>
         )
     }
 }
-export default App
