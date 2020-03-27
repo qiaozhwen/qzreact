@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import {Qay} from "qayfirework";
 import App from './src/component/App'
 
-ReactDom.render( < App / >, document.getElementById('qz')
-)
+Qay(<App/>, document.getElementById('qz'))
