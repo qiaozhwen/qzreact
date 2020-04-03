@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot --inline --colors --content-base ./build",
-    "build": "webpack --progress --colors"
+    "start": "webpack-dev-server --env development --config config/webpack.dev.config.js",
+    "build": "webpack --env production --config config/webpack.prod.config.js"
   },
   "author": "",
   "license": "ISC",

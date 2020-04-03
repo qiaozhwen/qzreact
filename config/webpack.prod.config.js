@@ -1,11 +1,13 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+console.log(__dirname, '-------------')
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './index.js',
     output: {
-        path: __dirname + "/build",
-        filename: "bundle.js"
+        path: path.resolve(__dirname, '../dist'),
+        filename: "[name].js",
+        publicPath:"/"
     },
     module: {
         //loaders加载器
@@ -28,15 +30,10 @@ module.exports = {
             },
         ]
     },
-    devServer: {
-        port: 8080,
-        progress: true,
-        contentBase: './build',
-    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "QZ REACT",
-            template: path.resolve(__dirname, 'index.html')
+            template: 'index.html'
         })
     ],
     resolve: {
